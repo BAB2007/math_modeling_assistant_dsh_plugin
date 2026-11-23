@@ -1,0 +1,43 @@
+{
+  "name": "dsh-math-modeling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "数学建模 Skill Suite：把 math-modeling-skill / scientific-agent-skills / academic-research-skills / nature-skills 整合成一套数模作业插件（9 个技能 + mm_* 工作流工具 + 内置知识库与脚本链）",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": "./lib/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "scripts",
+    "docs",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "verify": "node scripts/verify-plugin.mjs",
+    "links": "node scripts/check-links.mjs",
+    "simulate": "node scripts/simulate.mjs",
+    "test": "node scripts/verify-plugin.mjs && node scripts/check-links.mjs && node scripts/simulate.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": ["dsh", "dsh-bundle", "math-modeling", "cumcm", "mcm", "skills"],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+# dsh-math-modeling bundle patch
+#
+# 单包单插件：数学建模 Skill Suite。
+# 插入一条宿主行，插件在 apply() 内注册：
+#   - 9 个内置技能（路由 math-modeling + mm-modeling / mm-coding / mm-figure /
+#     mm-stats / mm-science / mm-search / mm-word / mm-paper / mm-review）
+#   - mm_* 工作流工具（项目初始化、三阶段、五门禁、交付物检查、完成判定、任务看板）
+#   - 一段数学建模系统提示协议
+# 知识库随包发布在 assets/，路径由 import.meta.url 推导，无需任何配置。
+- insert:
+    - id: math-modeling
+      name: dsh-math-modeling

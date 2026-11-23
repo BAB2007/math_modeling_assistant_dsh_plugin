@@ -1,0 +1,25 @@
+# 依赖与缓存
+node_modules/
+.pnpm-store/
+npm-debug.log*
+
+# 自检脚本产生的临时工作区
+.sandbox/
+
+# 项目运行态（.math-modeling/state.json 属于使用者的项目目录，不入库）
+.math-modeling/
+
+# 论文/编译中间产物
+*.aux
+*.log
+*.out
+*.toc
+*.tmp
+~$*.docx
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
